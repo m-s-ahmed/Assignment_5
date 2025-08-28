@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service</title>
+
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Hind Madurai Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/emergency.css" />
+  </head>
+  <body>
+    <!-- Navbar  Section-->
+    <nav
+      class="w-full flex flex-col md:flex-row items-center justify-between px-4 py-4"
+    >
+      <!-- left div -->
+      <div class="left-div flex items-center gap-3">
+        <img class="w-10 h-10" src="./assets/logo.png" alt="" />
+        <span class="font-extrabold text-green-900 leading-tight drop-shadow-md"
+          >Emergency<br />Service</span
+        >
+      </div>
+
+      <!-- right div -->
+      <div class="right-div flex gap-5 mt-4 md:mt-0">
+        <div
+          class="love-div flex items-center justify-center gap-2 w-25 h-10 rounded-full bg-[#bcfdc965]"
+        >
+          <span>0</span>
+          <img class="w-5 h-5" src="./assets/heart.png" alt="" />
+        </div>
+
+        <div
+          class="coin-div flex items-center justify-center gap-2 w-25 h-10 rounded-full bg-[#bcfdc965]"
+        >
+          <span>100</span>
+          <img class="w-5 h-5" src="./assets/coin.png" alt="" />
+        </div>
+
+        <div
+          class="coin-div flex items-center justify-center gap-2 w-25 h-10 text-white rounded-full bg-[#00A63E]"
+        >
+          <span>2 Copy</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+      class="hero-div w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
+    >
+      <div class="p-10 flex flex-col items-center">
+        <img class="w-25 h-25" src="./assets/logo-dark.png" alt="" />
+        <p class="hind-madurai-bold text-white mt-5 text-2xl">
+          জরুরি সেবা ডিরেক্টরি
+        </p>
+        <p class="hind-madurai-regular text-white">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
