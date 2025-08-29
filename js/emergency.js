@@ -36,16 +36,22 @@ allCall.forEach((btn) => {
 
     coinText.innerText = reduceCoin;
 
-    const time = new Date().toLocaleDateString();
+    const time = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    });
     const historyItem = document.createElement("div");
     historyItem.className =
       "flex justify-between items-center p-2  bg-gray-100  text-sm";
     historyItem.innerHTML = `
+
     <div>
     <p class="font-semibold">${serviceName}</p>
     <p class="text-gray-500">${serviceNumber}</p>
     </div>
-
+    
     <span class="text-xs text-gray-500">${time}</span>
     `;
 
