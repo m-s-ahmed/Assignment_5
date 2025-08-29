@@ -1,5 +1,6 @@
 const heartText = document.getElementById("heart-text");
 const coinText = document.getElementById("coin-text");
+const copyText = document.getElementById("copy-text");
 const historyContainer = document.getElementById("call-history");
 
 // heart icon functionalities
@@ -62,5 +63,39 @@ allCall.forEach((btn) => {
   const clearBtn = document.getElementById("clear-history");
   clearBtn.addEventListener("click", function () {
     historyContainer.innerHTML = "";
+  });
+});
+
+// copy button functionalities
+
+document.addEventListener("DOMContentLoaded", () => {
+  const copyCounterEl = document.querySelector(".copy-text");
+  let copyCount = Number(copyCounterEl.textContent);
+
+  document.querySelectorAll(".card-container").forEach((container) => {
+    const copyBtn = container.querySelector("button:not(.allcall)");
+    const callBtn = container.querySelector(".allcall");
+
+    if (!copyBtn || !callBtn) return;
+
+    const number = callBtn.dataset.number;
+
+    copyBtn.addEventListener("click", async () => {
+      if (!number) return;
+
+      await navigator.clipboard.writeText(number);
+
+      copyCount += 1;
+      if (copyCounterEl) copyCounterEl.textContent = String(copyCount);
+
+      const prevHtml = copyBtn.innerHTML;
+      copyBtn.innerHTML =
+        '<span><i class="fa-regular fa-copy mr-3"></i></span>Copied!';
+      copyBtn.disabled = true;
+      setTimeout(() => {
+        copyBtn.innerHTML = prevHtml;
+        copyBtn.disabled = false;
+      }, 1000);
+    });
   });
 });
